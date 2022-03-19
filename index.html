@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="app">
+    <div class="app__navbar">
+      <img class="app__logo" src="/logo.gif" alt="logo" />
+      <div class="app__profile">
+        <div class="flex"><i class="fa-solid fa-user"></i></div>
+        <p>ADMIN</p>
+      </div>
+    </div>
+
+    <div class="app__container">
+      <div class="app__sidebar">
+        <h1 class="app__sidebar-heading">Predictive Maintenance</h1>
+        <div class="app__divider"></div>
+        <ul class="app__sidebar-container">
+          <li class="app__sidebar-item" id="dash">
+            <i class="fas fa-desktop"></i>Dashboard
+          </li>
+          <li class="app__sidebar-item" id="sensor">
+            <i class="fa-solid fa-lightbulb"></i>Sensor
+          </li>
+          <li class="app__sidebar-item" id="data">
+            <i class="fas fa-database"></i>Data
+          </li>
+        </ul>
+        <fieldset class="app__location">
+          <legend>LOCATION</legend>
+          <iframe
+            scrolling="no"
+            src="https://thingspeak.com/channels/1641319/maps/channel_show"
+          ></iframe>
+        </fieldset>
+      </div>
+      <div class="app__data-container">
+        <div class="app__data-grid">
+          <fieldset class="app__data-frame">
+            <legend>SPRESENSE</legend>
+            <iframe
+              scrolling="no"
+              src="https://thingspeak.com/channels/1641319/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Real-Time&type=line&xaxis=Time&yaxis=Spresense+Data"
+            ></iframe>
+          </fieldset>
+          <fieldset class="app__data-frame">
+            <legend>TEMPERATURE</legend>
+            <iframe
+              scrolling="no"
+              src="https://thingspeak.com/channels/1641319/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+            ></iframe>
+          </fieldset>
+
+          <fieldset class="app__data-frame">
+            <legend>ALTITUDE</legend>
+            <iframe
+              scrolling="no"
+              src="https://thingspeak.com/channels/1641319/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+            ></iframe>
+          </fieldset>
+          <fieldset class="app__data-frame">
+            <legend>PRESSURE</legend>
+            <iframe
+              scrolling="no"
+              src="https://thingspeak.com/channels/1641319/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+            ></iframe>
+          </fieldset>
+
+          <!-- <fieldset class="app__data-frame">
+            <legend>LOCATION</legend>
+            <iframe
+            width="100px"
+            height="100px"
+              scrolling="no"
+              src="https://thingspeak.com/channels/1641319/maps/channel_show"
+            ></iframe>
+          </fieldset> -->
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/1694e3923a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
